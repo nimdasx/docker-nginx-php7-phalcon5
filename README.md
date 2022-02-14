@@ -13,3 +13,8 @@ docker run -d -p 80:80 -v /Users/sofyan/Dev/php:/app --name sf-nginx-php74 nimda
 ````
 docker rm -f sf-nginx-php74  
 ````
+## build dan push ke github :
+````
+docker build --tag ghcr.io/nimdasx/docker-nginx-php7-phalcon5 .
+docker push ghcr.io/nimdasx/docker-nginx-php7-phalcon5
+````
