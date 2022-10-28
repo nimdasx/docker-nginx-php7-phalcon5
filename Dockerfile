@@ -1,7 +1,7 @@
 FROM webdevops/php-nginx:7.4-alpine
 
 LABEL maintainer="nimdasx@gmail.com"
-LABEL description="nginx php74"
+LABEL description="nginx php-7.4 phalcon-5.0"
 
 #set timezone
 RUN ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime \
@@ -28,5 +28,5 @@ RUN apk add file
 RUN apk add autoconf make g++
 
 #phalcon 5 stable
-RUN pecl install phalcon-5.0.3 \
+RUN pecl install phalcon-5.0.5 \
     && docker-php-ext-enable phalcon
