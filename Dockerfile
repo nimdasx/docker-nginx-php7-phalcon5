@@ -13,3 +13,5 @@ COPY vhost.conf /opt/docker/etc/nginx/vhost.conf
 ADD --chmod=0755 https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
 RUN install-php-extensions sqlsrv pdo_sqlsrv phalcon-5.4.0
+
+# phalcon 5.4 adalah versi terakhir yang support php 7.4
